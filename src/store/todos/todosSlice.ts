@@ -20,6 +20,10 @@ export const todosSlice = createSlice({
     setSelectedTodo: (state, action: PayloadAction<Todo>) => {
       state.selectedTodo = action.payload;
     },
+    // setSelectedTodo using payload destructuring
+    // setSelectedTodoAux: (state, { payload }) => {
+    //   state.selectedTodo = payload;
+    // },
   },
   extraReducers: (builder) => {
     builder.addMatcher(
