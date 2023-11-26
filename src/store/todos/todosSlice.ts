@@ -26,6 +26,10 @@ export const todosSlice = createSlice({
       todosApi.endpoints.getTodos.matchFulfilled,
       (state, { payload }) => {
         state.todos = payload;
+        // Set the first todo as the selected todo
+        // if (payload.length > 0) {
+        //   state.selectedTodo = payload[0];
+        // }
       },
     );
   },
