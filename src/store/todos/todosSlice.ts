@@ -17,6 +17,13 @@ export const todosSlice = createSlice({
   name: 'todos',
   initialState,
   reducers: {
+    // setTodos example witout using extraReducers
+    // setTodos: (state, { payload }) => {
+    //   state.todos = payload;
+    //   if (payload.length > 0) {
+    //     state.selectedTodo = payload[0];
+    //   }
+    // },
     setSelectedTodo: (state, action: PayloadAction<Todo>) => {
       state.selectedTodo = action.payload;
     },
